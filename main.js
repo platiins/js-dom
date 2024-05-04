@@ -27,7 +27,7 @@ liJeff.innerText = "Jeff";
 liJeff.classList.add("item");
 list.append(liJeff);
 
-// adding Larry in the middle of the list 
+// adding Larry in the middle of the list
 
 let liItems = document.querySelectorAll(".item");
 let middleItemIndex = liItems.length / 2 - 1;
@@ -39,8 +39,6 @@ liItems[middleItemIndex].insertAdjacentHTML("afterEnd", "<li>Larry</li>");
 // liLarry.classList.add("item");
 
 // liItems[middleItemIndex].append(liLarry);
-
-
 
 // Remove Mel
 liItems[5].remove();
@@ -56,10 +54,24 @@ list.append(removedMel);
 
 // add list and background color to each odd row:
 
-console.log(liItems);
+/* 
+WHY NOT WORKING?
 
 for (let i = 0; i <= liItems.length; i++) {
   if (i % 2 === 1) {
     liItems[i].classList.add("bg-color");
+  }
+}
+*/
+
+// WHY WORKING?
+
+console.log(liItems);
+
+const newList = document.querySelectorAll("li");
+
+for (let i = 0; i <= newList.length; i++) {
+  if (i % 2 === 0) {
+    newList[i].classList.add("bg-color");
   }
 }
