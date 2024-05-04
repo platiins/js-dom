@@ -11,7 +11,7 @@ if (userAge < 18) {
   document.body.innerHTML = "<h1> no access <h2>";
 }
 
-// Add Smith, Jeff and Larry in the top, middle and end of the list
+// adding Smith in the top of the list
 
 const list = document.getElementById("list");
 
@@ -20,22 +20,29 @@ liSmith.innerText = "Smith";
 liSmith.classList.add("item");
 list.prepend(liSmith);
 
+// adding Jeff in the end of the list
+
 const liJeff = document.createElement("li");
 liJeff.innerText = "Jeff";
 liJeff.classList.add("item");
 list.append(liJeff);
 
+// adding Larry in the middle of the list 
+
 let liItems = document.querySelectorAll(".item");
 let middleItemIndex = liItems.length / 2 - 1;
 
-const liLarry = document.createElement("li");
-liLarry.innerText = "Larry";
-liLarry.classList.add("item");
+liItems[middleItemIndex].insertAdjacentHTML("afterEnd", "<li>Larry</li>");
 
-liItems[middleItemIndex].append(liLarry);
+// const liLarry = document.createElement("li");
+// liLarry.innerText = "Larry";
+// liLarry.classList.add("item");
+
+// liItems[middleItemIndex].append(liLarry);
+
+
 
 // Remove Mel
-
 liItems[5].remove();
 
 // Add a row that says that Mel has been removed from the list
