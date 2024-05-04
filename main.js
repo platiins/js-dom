@@ -70,7 +70,7 @@ console.log(liItems);
 
 const newList = document.querySelectorAll("li");
 
-for (let i = 0; i <= newList.length; i++) {
+for (let i = 0; i < newList.length; i++) {
   if (i % 2 === 0) {
     newList[i].classList.add("bg-color");
   }
